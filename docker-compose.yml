@@ -1,0 +1,16 @@
+factorio:
+  #image: elboletaire/factorio:latest
+  build: .
+  environment:
+    FACTORIO_AUTOSAVE_INTERVAL: 10
+    FACTORIO_AUTOSAVE_SLOTS: 20
+    FACTORIO_SERVER_DESCRIPTION: "el puto server de factorio de elboletaire"
+    FACTORIO_SERVER_GAME_PASSWORD: jarl
+    FACTORIO_SERVER_NAME: "factorio bullets server"
+    FACTORIO_SERVER_VISIBILITY: hidden
+    FACTORIO_SERVER_VERIFY_IDENTITY: 'false'
+    FACTORIO_SERVER_ADMINS: '["elboletaire", "vdo"]'
+  volumes:
+  - /srv/docker/factorio/saves-two:/opt/factorio/saves
+  ports:
+  - 34197:34197/udp
