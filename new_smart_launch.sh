@@ -107,8 +107,8 @@ cat << EOF > $SERVER_SETTINGS
   "autosave_slots": $FACTORIO_AUTOSAVE_SLOTS,
   "afk_autokick_interval": 0,
   "auto_pause": $FACTORIO_AUTO_PAUSE,
-  "only_admins_can_pause_the_game": true,
-  "autosave_only_on_server": true,
+  "only_admins_can_pause_the_game": $FACTORIO_ONLY_ADMINS_CAN_PAUSE,
+  "autosave_only_on_server": $FACTORIO_AUTOSAVE_ONLY_ON_SERVER,
   "admins": $FACTORIO_SERVER_ADMINS
 }
 EOF
