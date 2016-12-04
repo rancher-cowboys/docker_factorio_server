@@ -1,21 +1,21 @@
 services: docker
 before_install:
-  - docker -v
-  # set env vars in the build settings to interact with repositories
-  # see https://docs.travis-ci.com/user/environment-variables/#Defining-Variables-in-Repository-Settings
-  - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+- docker -v
+# set env vars in the build settings to interact with repositories
+# see https://docs.travis-ci.com/user/environment-variables/#Defining-Variables-in-Repository-Settings
+- docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
 
 script:
-  - |
-    if [ -z "$TRAVIS_TAG" ]; then
-      TRAVIS_TAG="latest"
-    fi
-    docker build -t "ranchercb/factorio:${TRAVIS_TAG}" .
+- |
+  if [ -z "$TRAVIS_TAG" ]; then
+    TRAVIS_TAG="latest"
+  fi
+  docker build -t "ranchercb/factorio:${TRAVIS_TAG}" .
 
 deploy:
   provider: script
   script:
-    - |
+  - |
     docker tag "ranchercb/factorio:${TRAVIS_TAG}" "ranchercb/factorio:latest" && \
     docker push "ranchercb/factorio:${TRAVIS_TAG}" && \
     docker push "ranchercb/factorio:latest"
