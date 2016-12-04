@@ -12,8 +12,6 @@ VOLUME /opt/factorio/saves /opt/factorio/mods
 EXPOSE 34197/udp
 EXPOSE 27015/tcp
 
-# CMD ["./new_smart_launch.sh"]
-
 ENV FACTORIO_AUTOSAVE_INTERVAL=2 \
     FACTORIO_AUTOSAVE_SLOTS=3 \
     FACTORIO_ALLOW_COMMANDS=false \
