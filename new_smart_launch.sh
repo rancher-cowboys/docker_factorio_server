@@ -10,6 +10,9 @@ echo '  \  \::/     \  \::/       \  \:\  /:/  \__\/  \:\   \  \:\  /:/   \  \::
 echo '   \  \:\      \  \:\        \  \:\/:/        \  \:\   \  \:\/:/     \  \:\          /__/:/    \  \:\/:/  '
 echo '    \  \:\      \  \:\        \  \::/          \__\/    \  \::/       \  \:\         \__\/      \  \::/   '
 echo '     \__\/       \__\/         \__\/                     \__\/         \__\/                     \__\/    '
+
+echo "Building version $VERSION"
+
 # Checking if server is ready
 if [ $FACTORIO_WAITING == true ]
 then
