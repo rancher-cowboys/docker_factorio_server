@@ -9,6 +9,8 @@ COPY ./factorio.crt /opt/
 
 VOLUME /opt/factorio/saves /opt/factorio/mods
 
+RUN echo $TRAVIS_TAG
+
 EXPOSE 34197/udp
 EXPOSE 27015/tcp
 
